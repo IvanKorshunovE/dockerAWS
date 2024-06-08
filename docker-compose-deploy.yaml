@@ -6,7 +6,7 @@ services:
       context: .
     restart: always
     volumes:
-      - static-data:/vol/web
+      - static-data:/vol/web  # needed to pass staticfiles to NGINX container
     environment:
       - DB_HOST=db
       - DB_NAME=${DB_NAME}
